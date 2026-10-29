@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Một Lá Thư</title>
+  <meta name="description" content="Được niêm phong bằng cả trái tim. Mở ra nhé.">
+  <meta property="og:title" content="Một lá thư cho em 💌">
+  <meta property="og:description" content="Được niêm phong bằng cả trái tim. Mở ra nhé.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#1c120d">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%8C%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Cormorant+SC:wght@500;600&family=Pinyon+Script&display=swap&subset=vietnamese" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=4">
+</head>
+<body>
+  <div class="petals" aria-hidden="true"></div>
+
+  <!-- Stage 1: sealed envelope -->
+  <main class="envelope-scene">
+    <p class="kicker">Em có thư</p>
+
+    <button class="envelope" type="button" aria-label="Bóc con dấu và mở thư">
+      <span class="env-back"></span>
+      <span class="env-letter"><span class="env-letter-text">gửi em</span></span>
+      <span class="env-front">
+        <span class="env-address">Gửi <span data-her></span></span>
+      </span>
+      <span class="env-flap-shadow"></span>
+      <span class="env-flap"></span>
+      <span class="seal">
+        <span class="seal-half seal-l"><span class="wax"><span class="wax-mark">♥</span></span></span>
+        <span class="seal-half seal-r"><span class="wax"><span class="wax-mark">♥</span></span></span>
+      </span>
+    </button>
+
+    <p class="hint">chạm vào con dấu để mở thư</p>
+  </main>
+
+  <!-- Stage 2: the letter -->
+  <section class="letter-scene" aria-live="polite">
+    <div class="letter-wrap">
+      <article class="sheet paper">
+        <div class="letter-body">
+          <p class="salutation ink"><span data-her></span> thân yêu của anh,</p>
+
+		<p class="ink">Anh muốn dành một buổi tối thật chill và thú vị với em, và anh nghĩ một chút bầu khí trời, một bữa tối thật ngon sẽ là một khởi điểm tốt cho hai đứa.</p>
+
+          <p class="ink">Em có đồng ý dùng bữa tối cùng anh không?</p>
+
+          <div class="details ink">
+            <div class="flourish" aria-hidden="true">&#10086;</div>
+            <p class="detail-date" data-date></p>
+            <p class="detail-time" data-time></p>
+            <p class="detail-place" data-place></p>
+            <a class="map-link" data-map target="_blank" rel="noopener">xem trên bản đồ &rarr;</a>
+            <div class="flourish flip" aria-hidden="true">&#10086;</div>
+          </div>
+
+          <p class="ink">Em cứ mặc bộ đồ em thích nhất nhé. Anh sẽ là người đứng mỉm cười chờ em ở cửa.</p>
+
+          <p class="signoff ink">Mãi là của em,</p>
+          <p class="signature ink" data-from></p>
+
+          <div class="rsvp ink">
+            <p class="rsvp-q">Em đồng ý chứ?</p>
+            <div class="rsvp-buttons">
+              <button class="btn btn-yes" type="button">Có</button>
+              <button class="btn btn-no" type="button">Không</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="success" hidden>
+          <p class="success-title">Hẹn em nhé!</p>
+          <div class="flourish" aria-hidden="true">&#10086;</div>
+          <p>Anh mong tới lúc đó lắm, <span data-her></span>.</p>
+          <p class="success-when"><span data-date></span><br><span data-time></span><br><strong data-place></strong></p>
+          <div class="success-actions">
+            <a class="btn" data-map target="_blank" rel="noopener">Mở bản đồ</a>
+            <a class="btn" data-gcal target="_blank" rel="noopener">Thêm vào lịch</a>
+          </div>
+          <a class="ics-link" data-ics href="#">hoặc tải file .ics (Apple / Outlook)</a>
+          <p class="ps">T.B. Giữ lá thư này nhé &mdash; đây là vé của em.</p>
+        </div>
+      </article>
+
+      <!-- Folded paper overlay used only for the unfold animation -->
+      <div class="fold" aria-hidden="true">
+        <div class="panel panel-top">
+          <div class="face front"><div class="slice paper"></div><div class="shade"></div></div>
+          <div class="face back"></div>
+        </div>
+        <div class="panel panel-mid">
+          <div class="face front"><div class="slice paper"></div></div>
+        </div>
+        <div class="panel panel-bot">
+          <div class="face front"><div class="slice paper"></div><div class="shade"></div></div>
+          <div class="face back"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script src="script.js?v=4"></script>
+</body>
+</html>
